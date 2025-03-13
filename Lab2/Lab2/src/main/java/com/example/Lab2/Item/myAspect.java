@@ -1,4 +1,6 @@
-package com.example.Lab2.aspect;
+package com.example.Lab2.Item;
+
+
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -12,7 +14,7 @@ import java.util.stream.IntStream;
 @Aspect
 @Component
 public class myAspect {
-    @Pointcut("execution(* com.example.Lab2.Controller.myController.*(..))")
+    @Pointcut("execution(* com.example.Lab2.Item.myController.*(..))")
     public void controllerMethods() {}
 
     @Before("controllerMethods()")
@@ -27,3 +29,5 @@ public class myAspect {
         }
     }
 }
+
+
